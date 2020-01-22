@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import './assets/reset.css';
+import './assets/global.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
