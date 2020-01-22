@@ -2,17 +2,12 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 
+import { Title } from '../styles';
+
 const HomeContainer = styled.div`
   max-width: 500px;
   margin: 0 auto;
   padding: 5rem;
-
-  h1 {
-    text-align: center;
-    font-size: 2.4rem;
-    margin-bottom: 2rem;
-    font-weight: 600;
-  }
 `;
 
 const StyledLink = styled(Link)`
@@ -35,7 +30,7 @@ const StyledLink = styled(Link)`
 const Home = () => {
   return (
     <HomeContainer>
-      <h1> FCC Front End Projects </h1>
+      <Title> FCC Front End Projects </Title>
 
       <nav>
         <StyledLink to="/palindrome"> Palindrome </StyledLink>
