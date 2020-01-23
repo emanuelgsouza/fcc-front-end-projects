@@ -36,6 +36,7 @@ const Container = styled.div`
     border: none;
     border-bottom: 2px solid #FDF0D5;
     color: #FDF0D5;
+    margin-bottom: 10px;
   }
 
   button {
@@ -46,6 +47,7 @@ const Container = styled.div`
     border-radius: 2px;
     background-color: #3A3335;
     color: #FDF0D5;
+    border: 1px solid #FDF0D5;
 
     &:hover,
     &:focus {
@@ -68,7 +70,7 @@ export default class PalindromeApplication extends Component {
     super(props);
 
     this.state = {
-      word: null
+      word: ''
     };
 
     this.handleClick = this.handleClick.bind(this);
@@ -76,6 +78,10 @@ export default class PalindromeApplication extends Component {
   }
 
   handleClick () {
+    if (!this.state.word) {
+      return
+    }
+
     if (palindromeCheck(this.state.word)) {
       alert(`It's a palindrome!`)
     } else {
@@ -92,6 +98,7 @@ export default class PalindromeApplication extends Component {
   }
 
   render() {
+    const inputDisabled = !this.state.word
     return (
       <Container>
         <Title> Palindrome Application </Title>
@@ -107,7 +114,7 @@ export default class PalindromeApplication extends Component {
         <hr />
 
         <div className="field">
-          <label className="label" for="word">
+          <label className="label" htmlFor="word">
             Type a word or a sentence
           </label>
 
@@ -116,7 +123,7 @@ export default class PalindromeApplication extends Component {
             type="text"
             id="word"
             placeholder="Waiting for some word..."
-            autofocus
+            autoFocus={true}
             required
             name="word"
             value={this.state.word}
@@ -127,6 +134,7 @@ export default class PalindromeApplication extends Component {
         <button
           type="submit"
           onClick={this.handleClick}
+          disabled={inputDisabled}
         > Check!
         </button>
       </Container>
