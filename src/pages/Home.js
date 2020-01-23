@@ -5,9 +5,9 @@ import styled from 'styled-components';
 import { Title } from '../styles';
 
 const HomeContainer = styled.div`
-  max-width: 500px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 5rem;
+  padding: 2rem;
 `;
 
 const StyledLink = styled(Link)`

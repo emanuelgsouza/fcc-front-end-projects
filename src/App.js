@@ -4,14 +4,26 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import styled from 'styled-components';
 
 import Home from './pages/Home';
 import Palindrome from './pages/Palindrome';
 
+import Copyright from './components/Copyright'
+
+const AppContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 100vw;
+  min-height: 100vh;
+`;
+
+
 function App() {
   return (
     <Router>
-      <div className="App">
+      <AppContainer>
         <Switch>
           <Route path="/" exact={true}>
             <Home />
@@ -21,7 +33,9 @@ function App() {
             <Palindrome />
           </Route>
         </Switch>
-      </div>
+
+        <Copyright />
+      </AppContainer>
     </Router>
   );
 }

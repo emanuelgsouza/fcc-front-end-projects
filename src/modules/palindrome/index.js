@@ -6,9 +6,9 @@ import styled from 'styled-components';
 import { Title } from '../../styles';
 
 const Container = styled.div`
-  max-width: 500px;
+  max-width: 600px;
   margin: 5rem auto 0 auto;
-  padding: 3rem 5rem;
+  padding: 2rem 1.5rem;
   border-radius: 10px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
   border: 2px solid #3A3335;
@@ -123,7 +123,6 @@ export default class PalindromeApplication extends Component {
             type="text"
             id="word"
             placeholder="Waiting for some word..."
-            autoFocus={true}
             required
             name="word"
             value={this.state.word}
