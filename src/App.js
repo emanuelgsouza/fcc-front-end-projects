@@ -5,6 +5,7 @@ import {
   Route
 } from "react-router-dom";
 import styled from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 
 import Home from './pages/Home';
 import Palindrome from './pages/Palindrome';
@@ -19,24 +20,32 @@ const AppContainer = styled.div`
   min-height: 100vh;
 `;
 
+const theme = {
+  primaryColor: '#3A3335',
+  secondaryColor: '#FDF0D5',
+  danger: '#F0544F'
+}
+
 
 function App() {
   return (
-    <Router>
-      <AppContainer>
-        <Switch>
-          <Route path="/" exact={true}>
-            <Home />
-          </Route>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <AppContainer>
+          <Switch>
+            <Route path="/" exact={true}>
+              <Home />
+            </Route>
 
-          <Route path="/palindrome">
-            <Palindrome />
-          </Route>
-        </Switch>
+            <Route path="/palindrome">
+              <Palindrome />
+            </Route>
+          </Switch>
 
-        <Copyright />
-      </AppContainer>
-    </Router>
+          <Copyright />
+        </AppContainer>
+      </Router>
+    </ThemeProvider>
   );
 }
 

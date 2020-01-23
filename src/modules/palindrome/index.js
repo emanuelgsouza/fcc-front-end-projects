@@ -11,8 +11,7 @@ const Container = styled.div`
   padding: 2rem 1.5rem;
   border-radius: 10px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
-  border: 2px solid #3A3335;
-  background-color: #3A3335;
+  background-color: ${props => props.theme.primaryColor};
   color: white;
 
   hr {
@@ -32,10 +31,10 @@ const Container = styled.div`
     width: 100%;
     margin-bottom: 0.5rem;
     padding: 0.3rem 0.5rem 0.3rem 0;
-    background-color: #3A3335;
+    background-color: ${props => props.theme.primaryColor};
     border: none;
-    border-bottom: 2px solid #FDF0D5;
-    color: #FDF0D5;
+    border-bottom: 2px solid ${props => props.theme.secondaryColor};
+    color: ${props => props.theme.secondaryColor};
     margin-bottom: 10px;
   }
 
@@ -45,14 +44,14 @@ const Container = styled.div`
     padding: 0.3rem 0.8rem;
     border: none;
     border-radius: 2px;
-    background-color: #3A3335;
-    color: #FDF0D5;
-    border: 1px solid #FDF0D5;
+    background-color: ${props => props.theme.primaryColor};
+    color: ${props => props.theme.secondaryColor};
+    border: 1px solid ${props => props.theme.secondaryColor};
 
     &:hover,
     &:focus {
-      color: #3A3335;
-      background-color: #FDF0D5;
+      color: ${props => props.theme.primaryColor};
+      background-color: ${props => props.theme.secondaryColor};
     }
   }
 `;

@@ -16,14 +16,14 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   text-align: center;
   padding: 1rem 1.2rem;
-  border: 1px solid #3A3335;
-  color: #3A3335;
+  border: 1px solid ${props => props.theme.primaryColor};
+  color: ${props => props.theme.primaryColor};
   font-size: 1.4rem;
 
   &:hover,
   &:focus {
-    background-color: #3A3335;
-    color: #FDF0D5;
+    background-color: ${props => props.theme.primaryColor};
+    color: ${props => props.theme.secondaryColor};
   }
 `;
 
