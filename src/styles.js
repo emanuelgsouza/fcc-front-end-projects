@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 
+export const DefaultColors = {
+  primaryColor: '#3A3335',
+  secondaryColor: '#FDF0D5',
+  danger: '#F0544F',
+  light: '#FFFFFF'
+};
+
 export const Title = styled.h1`
   text-align: center;
   font-size: 2.4rem;

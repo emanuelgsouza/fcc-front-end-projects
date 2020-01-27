@@ -7,8 +7,10 @@ import {
 import styled from 'styled-components';
 import { ThemeProvider } from 'styled-components';
 
+// pages
 import Home from './pages/Home';
 import Palindrome from './pages/Palindrome';
+import RomanConverter from './pages/RomanConverter';
 
 import Copyright from './components/Copyright'
 
@@ -39,6 +41,10 @@ function App() {
 
             <Route path="/palindrome">
               <Palindrome />
+            </Route>
+
+            <Route path="/roman-converter">
+              <RomanConverter />
             </Route>
           </Switch>
 

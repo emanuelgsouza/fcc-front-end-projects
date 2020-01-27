@@ -8,6 +8,10 @@ const HomeContainer = styled.div`
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
+
+  a:not(:last-child) {
+    margin-bottom: 1rem;
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -34,6 +38,7 @@ const Home = () => {
 
       <nav>
         <StyledLink to="/palindrome"> Palindrome </StyledLink>
+        <StyledLink to="/roman-converter"> Roman Converter </StyledLink>
       </nav>
     </HomeContainer>
   );
