@@ -1,68 +1,9 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+
 import palindromeCheck from './utils/palindrome';
-import styled from 'styled-components';
 
-import { Title } from '../../styles';
-
-const Container = styled.div`
-  max-width: 600px;
-  margin: 5rem auto 0 auto;
-  padding: 2rem 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
-  background-color: ${props => props.theme.primaryColor};
-  color: white;
-
-  hr {
-    max-width: 250px;
-    margin: 1rem auto;
-  }
-
-  label {
-    display: block;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-
-  input {
-    font-size: 1.2rem;
-    display: block;
-    width: 100%;
-    margin-bottom: 0.5rem;
-    padding: 0.3rem 0.5rem 0.3rem 0;
-    background-color: ${props => props.theme.primaryColor};
-    border: none;
-    border-bottom: 2px solid ${props => props.theme.secondaryColor};
-    color: ${props => props.theme.secondaryColor};
-    margin-bottom: 10px;
-  }
-
-  button {
-    display: block;
-    font-size: 1.2rem;
-    padding: 0.3rem 0.8rem;
-    border: none;
-    border-radius: 2px;
-    background-color: ${props => props.theme.primaryColor};
-    color: ${props => props.theme.secondaryColor};
-    border: 1px solid ${props => props.theme.secondaryColor};
-
-    &:hover,
-    &:focus {
-      color: ${props => props.theme.primaryColor};
-      background-color: ${props => props.theme.secondaryColor};
-    }
-  }
-`;
-
-const BackToHome = styled(Link)`
-  text-align: center;
-  margin: 0 auto;
-  display: block;
-  max-width: 200px;
-  font-size: 1rem;
-`;
+import * as C from '../../components';
+import * as S from '../../styles';
 
 export default class PalindromeApplication extends Component {
   constructor (props) {
@@ -99,43 +40,33 @@ export default class PalindromeApplication extends Component {
   render() {
     const inputDisabled = !this.state.word
     return (
-      <Container>
-        <Title> Palindrome Application </Title>
-
-        <BackToHome to="/"> Back to home </BackToHome>
-
-        <hr />
-
+      <C.Card
+        title="Palindrome Application"
+      >
         <p> According to <a href="https://en.wikipedia.org/wiki/Palindrome"> Wikipedia </a>, a palindrome is a word, number, phrase, or other sequence of characters which reads the same backward as forward, such as <span className="is-italic">madam</span>, <span className="is-italic">racecar</span>, or the number 10801. </p>
 
         <p> Bellow, you can check if any word or sentence is a palindrome. </p>
 
         <hr />
 
-        <div className="field">
-          <label className="label" htmlFor="word">
-            Type a word or a sentence
-          </label>
+        <C.Input
+          type="text"
+          id="word"
+          placeholder="Waiting for some word..."
+          label="Type a word or a sentence"
+          required
+          name="word"
+          value={this.state.word}
+          onChange={this.handleInputChange}
+        />
 
-          <input
-            className="input"
-            type="text"
-            id="word"
-            placeholder="Waiting for some word..."
-            required
-            name="word"
-            value={this.state.word}
-            onChange={this.handleInputChange}
-          />
-        </div>
-
-        <button
+        <S.Button
           type="submit"
           onClick={this.handleClick}
           disabled={inputDisabled}
         > Check!
-        </button>
-      </Container>
+        </S.Button>
+      </C.Card>
     );
   }
 }
