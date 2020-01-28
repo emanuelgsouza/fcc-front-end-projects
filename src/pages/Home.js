@@ -9,7 +9,15 @@ const HomeContainer = styled.div`
   margin: 0 auto;
   padding: 2rem;
 
+  p a {
+    color: #F0544F;
+  }
+
   a:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  p {
     margin-bottom: 1rem;
   }
 `;
@@ -35,6 +43,10 @@ const Home = () => {
   return (
     <HomeContainer>
       <Title> FCC Front End Projects </Title>
+
+      <p>
+        This website implement some simple application in React inspired in <a href="https://www.freecodecamp.org/learn"> freeCodeCamp </a> projects, like Palindrome Checker, Roman Converter among others...
+      </p>
 
       <nav>
         <StyledLink to="/palindrome"> Palindrome </StyledLink>
