@@ -47,6 +47,7 @@ const Home = () => {
       <nav>
         <StyledLink to="/palindrome"> Palindrome </StyledLink>
         <StyledLink to="/roman-converter"> Roman Converter </StyledLink>
+        <StyledLink to="/cash-register"> Cash Register </StyledLink>
       </nav>
     </HomeContainer>
   );

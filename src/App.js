@@ -11,6 +11,7 @@ import { ThemeProvider } from 'styled-components';
 import Home from './pages/Home';
 import Palindrome from './pages/Palindrome';
 import RomanConverter from './pages/RomanConverter';
+import CashRegister from './pages/CashRegister';
 
 import Copyright from './components/Copyright'
 
@@ -45,6 +46,10 @@ function App() {
 
             <Route path="/roman-converter">
               <RomanConverter />
+            </Route>
+
+            <Route path="/cash-register">
+              <CashRegister/>
             </Route>
           </Switch>
 
