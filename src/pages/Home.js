@@ -38,7 +38,7 @@ const StyledLink = styled(Link)`
 const Home = () => {
   return (
     <HomeContainer>
-      <Title> FCC Front End Projects </Title>
+      <Title className="title"> FCC Front End Projects </Title>
 
       <p>
         This website implement some simple application in React inspired in <a className="link" href="https://www.freecodecamp.org/learn"> freeCodeCamp </a> projects, like Palindrome Checker, Roman Converter among others...

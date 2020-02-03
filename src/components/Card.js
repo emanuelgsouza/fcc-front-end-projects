@@ -31,7 +31,7 @@ const BackToHome = styled(Link)`
 const Card = (props) => {
   return (
     <Container>
-      <Title> {props.title} </Title>
+      <Title className="title"> {props.title} </Title>
 
       <BackToHome to="/"> Back to home </BackToHome>
 
