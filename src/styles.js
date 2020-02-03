@@ -16,8 +16,8 @@ export const Title = styled.h1`
 
 export const Button = styled.button`
   display: block;
-  font-size: 1.2rem;
-  padding: 0.3rem 0.8rem;
+  font-size: 1.4rem;
+  padding: 0.5rem 0.8rem;
   border: none;
   border-radius: 2px;
   background-color: ${props => props.theme.primaryColor};
