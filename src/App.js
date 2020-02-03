@@ -16,7 +16,7 @@ import Pomodoro from './pages/Pomodoro';
 
 import Copyright from './components/Copyright'
 
-const AppContainer = styled.div`
+const AppContainer = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,7 +27,7 @@ const AppContainer = styled.div`
 const theme = {
   primaryColor: '#3A3335',
   secondaryColor: '#FDF0D5',
-  danger: '#F0544F'
+  danger: '#A2100B'
 }
 
 
