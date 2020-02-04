@@ -46,7 +46,7 @@ const Container = styled.div`
 
 const Notification = props => {
   return (
-    <Container type={props.type}>
+    <Container className="notification" type={props.type}>
       {props.message}
     </Container>
   );
